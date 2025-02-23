@@ -45,8 +45,8 @@ export const columns: TableProps<DataType>["columns"] = [
   {
     title: "Action",
     key: "action",
-    render: (_, record) => (
-      <Space size="middle">
+    render: (record) => (
+      <Space size="middle" key={record?.id}>
         <Link to="/passport/passport-view/1">
           <ViewButton to="/passport/passport-view/1">View</ViewButton>
         </Link>

@@ -8,9 +8,7 @@ import {
   Space,
   Table,
   TableProps,
-  Tag,
 } from "antd";
-import { useCreateRestaurantMutation } from "../../../Restaurants/api/restaurantsEndpoint";
 import TextArea from "antd/es/input/TextArea";
 interface DataType {
   key: string;
@@ -20,11 +18,9 @@ interface DataType {
   tags: string[];
 }
 const NonCommissionRightSide = () => {
-  const [create, { isLoading, isSuccess }] = useCreateRestaurantMutation();
+  // const [create, { isLoading, isSuccess }] = useCreateRestaurantMutation();
 
   const onFinish = (values: any): void => {
-    const formData: FormData = new FormData();
-
     console.log("vvv", values);
 
     // Object.entries(values).forEach(([key, value]) => {

@@ -1,10 +1,5 @@
 import { Button, Card, Col, Row, Space, TableProps } from "antd";
-import {
-  HarmonyOSOutlined,
-  ManOutlined,
-  PlusOutlined,
-  WomanOutlined,
-} from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import EditButton from "../../../../common/CommonAnt/Button/EditButton";
 import ViewButton from "../../../../common/CommonAnt/Button/ViewButton";
@@ -37,8 +32,8 @@ const columns: TableProps<DataType>["columns"] = [
   {
     title: "Action",
     key: "action",
-    render: (_, record) => (
-      <Space size="middle">
+    render: (record) => (
+      <Space size="middle" key={record?.id}>
         <EditButton>Edit</EditButton>
         <ViewButton to="/">View</ViewButton>
         <DeleteButton>Delete</DeleteButton>

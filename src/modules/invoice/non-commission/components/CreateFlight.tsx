@@ -18,6 +18,9 @@ const CreateFlight = () => {
   const handleAddItem = (item: string) => {
     setItems([...items, item]);
   };
+
+  console.log(handleAddItem);
+
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);
   };

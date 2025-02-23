@@ -1,7 +1,5 @@
 import React from "react";
-import { Form } from "../../../../common/CommonAnt";
-import { useCreateRestaurantMutation } from "../../../Restaurants/api/restaurantsEndpoint";
-import { Badge, Card, Col, Input, InputNumber, Row, Select } from "antd";
+import { Badge, Card, Col, Input, InputNumber, Row, Select, Form } from "antd";
 import CommonClient from "../../../../common/commonCLient/CommonClient";
 import {
   HarmonyOSOutlined,
@@ -17,10 +15,9 @@ import CreateFlight from "../../non-commission/components/CreateFlight";
 const { Option } = Select;
 
 const CreateCommisionAirTicket = () => {
-  const [create, { isLoading, isSuccess }] = useCreateRestaurantMutation();
+  // const [create, { isLoading, isSuccess }] = useCreateRestaurantMutation();
 
   const onFinish = (values: any): void => {
-    const formData: FormData = new FormData();
 
     console.log("vvv", values);
 
@@ -43,8 +40,7 @@ const CreateCommisionAirTicket = () => {
     <React.Fragment>
       <Form
         onFinish={onFinish}
-        isLoading={isLoading}
-        isSuccess={isSuccess}
+ 
         initialValues={{ items: [{}] }}
       >
         <Badge.Ribbon text="Basic Information" color="blue" placement="start">

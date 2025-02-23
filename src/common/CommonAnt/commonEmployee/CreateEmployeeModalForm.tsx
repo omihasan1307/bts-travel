@@ -1,18 +1,8 @@
-import {
-  Card,
-  Col,
-  DatePicker,
-  DatePickerProps,
-  Input,
-  Radio,
-  Row,
-  Select,
-} from "antd";
+import { Card, Col, Input, Radio, Row, Select } from "antd";
 import React from "react";
 import { useCreateRestaurantMutation } from "../../../modules/Restaurants/api/restaurantsEndpoint";
 import Form from "../Form";
 import { DatePickerWithOptionalToday } from "../CommonSearch/CommonSearch";
-import moment from "moment";
 
 type FieldType = {
   paxName: string;

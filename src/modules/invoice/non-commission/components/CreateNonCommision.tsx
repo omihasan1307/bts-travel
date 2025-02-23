@@ -1,7 +1,5 @@
 import React from "react";
-import { Form } from "../../../../common/CommonAnt";
-import { useCreateRestaurantMutation } from "../../../Restaurants/api/restaurantsEndpoint";
-import { Badge, Card, Col, Input, InputNumber, Row, Select } from "antd";
+import { Badge, Card, Col, Input, Row, Select, Form } from "antd";
 import CommonClient from "../../../../common/commonCLient/CommonClient";
 import {
   HarmonyOSOutlined,
@@ -13,14 +11,11 @@ import { DatePickerWithOptionalToday } from "../../../../common/CommonAnt/Common
 import CommonAgent from "../../../../common/CommonAgent/CommonAgent";
 import CreatePaxPassport from "./CreatePaxPassport";
 import CreateFlight from "./CreateFlight";
-const { Option } = Select;
 
 const CreateNonCommision = () => {
-  const [create, { isLoading, isSuccess }] = useCreateRestaurantMutation();
+  // const [create, { isLoading, isSuccess }] = useCreateRestaurantMutation();
 
   const onFinish = (values: any): void => {
-    const formData: FormData = new FormData();
-
     console.log("vvv", values);
 
     // Object.entries(values).forEach(([key, value]) => {
@@ -40,12 +35,7 @@ const CreateNonCommision = () => {
 
   return (
     <React.Fragment>
-      <Form
-        onFinish={onFinish}
-        isLoading={isLoading}
-        isSuccess={isSuccess}
-        initialValues={{ items: [{}] }}
-      >
+      <Form onFinish={onFinish} initialValues={{ items: [{}] }}>
         <Badge.Ribbon text="Basic Information" color="blue" placement="start">
           <Card style={{ paddingTop: "20px" }} size="small">
             <Row gutter={[10, 10]}>

@@ -1,14 +1,8 @@
 import { Button, Card, Col, Row, Space, TableProps, Tag } from "antd";
 import { SearchComponent } from "../../../common/CommonAnt/CommonSearch/CommonSearch";
 import { showModal } from "../../../app/features/modalSlice";
-import {
-  HarmonyOSOutlined,
-  ManOutlined,
-  PlusOutlined,
-  WomanOutlined,
-} from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
-import CreateClientModalForm from "../../../common/commonCLient/CreateClientModalForm";
 import { Table } from "../../../common/CommonAnt";
 import EditButton from "../../../common/CommonAnt/Button/EditButton";
 import DeleteButton from "../../../common/CommonAnt/Button/DeleteButton";
@@ -64,8 +58,8 @@ const columns: TableProps<DataType>["columns"] = [
   {
     title: "Action",
     key: "action",
-    render: (_, record) => (
-      <Space size="middle">
+    render: (record) => (
+      <Space size="middle" key={record?.id}>
         <EditButton>Edit</EditButton>
         <ViewButton to="/">View</ViewButton>
         <DeleteButton>Delete</DeleteButton>

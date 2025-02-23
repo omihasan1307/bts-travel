@@ -4,7 +4,7 @@ import { useCreateRestaurantMutation } from "../../../../Restaurants/api/restaur
 import {
   HarmonyOSOutlined,
   ManOutlined,
-  PlusOutlined,
+
   WomanOutlined,
 } from "@ant-design/icons";
 
